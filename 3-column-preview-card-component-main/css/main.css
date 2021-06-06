@@ -8,6 +8,7 @@
   --lightGrey: hsl(0, 0%, 95%);
   --buttonBorderRadius: 8rem;
   --cardBorderRadius: 1rem;
+  --desktopSize: 1440px;
   font-size: 10px;
 }
 
@@ -27,6 +28,15 @@ p {
 button {
   border: none;
   background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
 }
 
 body {
@@ -65,16 +75,22 @@ body {
   font-family: "Lexend Deca";
   font-size: 1.5rem;
   line-height: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   color: var(--transparentWhite);
 }
 
-.card button {
+.card .button {
   font-family: "Lexend Deca";
   font-size: 1.6rem;
   border-radius: var(--buttonBorderRadius);
   padding: 1.5rem 3rem;
   background-color: var(--lightGrey);
+  border: 2px solid var(--lightGrey);
+}
+
+.card .button:hover {
+  background-color: unset;
+  color: var(--lightGrey);
 }
 
 .sedans {
@@ -83,7 +99,7 @@ body {
   border-top-right-radius: var(--cardBorderRadius);
 }
 
-.sedans button {
+.sedans .button {
   color: var(--orange);
 }
 
@@ -91,7 +107,7 @@ body {
   background-color: var(--cyan);
 }
 
-.suvs button {
+.suvs .button {
   color: var(--cyan);
 }
 
@@ -101,7 +117,26 @@ body {
   border-bottom-right-radius: var(--cardBorderRadius);
 }
 
-.luxury button {
+.luxury .button {
   color: var(--cyan);
+}
+
+@media screen and (min-width: 1440px) {
+  .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-container .card p {
+    margin-bottom: 10rem;
+  }
+  .sedans {
+    border-top-right-radius: unset;
+    border-bottom-left-radius: var(--cardBorderRadius);
+  }
+  .luxury {
+    border-top-right-radius: var(--cardBorderRadius);
+    border-bottom-left-radius: unset;
+  }
 }
 /*# sourceMappingURL=main.css.map */
