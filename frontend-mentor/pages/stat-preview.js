@@ -1,3 +1,4 @@
+import importedImage from "../components/stat-preview/images/image-header-desktop.jpg";
 import {
   Card,
   MainContainerStyle,
@@ -11,6 +12,7 @@ import {
   StatNumber,
   Text,
 } from "../components/stat-preview/styles/Typography";
+import { MainImage } from "../components/stat-preview/styles/Images";
 
 export default function StatsPage() {
   const stats = [

@@ -36,8 +36,7 @@ export const ImageContainer = styled.div`
   height: 250px;
   border-top-left-radius: var(--cardBorderRadius);
   border-top-right-radius: var(--cardBorderRadius);
-  background-image: url("https://unsplash.com/photos/FEWChSELTCQ");
-  /* background-image: url(${mobileBG}); */
+  background-image: url(${mobileBG.src});
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -48,7 +47,7 @@ export const ImageContainer = styled.div`
     height: 100%;
     border-bottom-right-radius: var(--cardBorderRadius);
     border-top-right-radius: var(--cardBorderRadius);
-    background-image: url(${desktopBG});
+    background-image: url(${desktopBG.src});
   }
 `;
 
